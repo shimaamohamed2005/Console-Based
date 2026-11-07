@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة وتحليل نتائج الطلاب</title>
+    <!-- ربط ملف التنسيقات الخارجي -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>نظام إدارة وتحليل نتائج الطلاب</h1>
+        <p>تطبيق عملي يعتمد على مفاهيم البرمجة كائنية التوجه (OOP) و دالات المجموعات الأكاديمية</p>
+    </header>
+
+    <!-- لوحة الإحصائيات -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>إجمالي الطلاب</h3>
+            <div class="value" id="total-students-count">0</div>
+        </div>
+        <div class="stat-card">
+            <h3>المشمولين بالرأفة</h3>
+            <div class="value" id="struggling-students-count" style="color: var(--warning);">0</div>
+        </div>
+        <div class="stat-card">
+            <h3>متوسط الرأفة الأكاديمي</h3>
+            <div class="value" id="final-struggling-avg" style="color: var(--success);">0.00</div>
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+        <!-- الجدول الرئيسي -->
+        <div class="card">
+            <h2>المصفوفة الرئيسية للطلاب (Main Students Array)</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>رقم الجلوس</th>
+                            <th>اسم الطالب</th>
+                            <th>المتوسط الأكاديمي</th>
+                            <th>التقدير</th>
+                            <th>حالة الحضور</th>
+                            <th>النتيجة النهائية</th>
+                        </tr>
+                    </thead>
+                    <tbody id="main-students-table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- لجنة الرأفة -->
+        <div class="card">
+            <h2>لجنة الرأفة والمعالجة الذكية (+5 درجات)</h2>
+            <div id="struggling-students-container">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ربط ملف الجافا سكريبت الخارجي في النهاية للتأكد من تحميل العناصر -->
+<script src="script.js"></script>
+</body>
+</html>
